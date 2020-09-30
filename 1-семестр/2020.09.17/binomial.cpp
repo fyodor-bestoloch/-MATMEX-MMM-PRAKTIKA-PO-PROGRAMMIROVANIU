@@ -1,3 +1,4 @@
+//Написать программу вычисляющую биномиальный коэффициент из n по k
 #include <iostream>
 using namespace std;
   int exclaim (int x,int y){
