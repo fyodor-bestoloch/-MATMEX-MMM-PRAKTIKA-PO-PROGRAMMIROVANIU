@@ -1,4 +1,5 @@
-#include <iostream>
+//реализовать функцию Аккермана
+#include <iostream
 using namespace std;
 int ack(int m,int n)
 {
