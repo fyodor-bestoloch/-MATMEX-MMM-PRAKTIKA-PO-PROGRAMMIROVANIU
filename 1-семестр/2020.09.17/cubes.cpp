@@ -1,4 +1,5 @@
-  #include <iostream>
+//среднее арифметическое кубов последовательности  
+#include <iostream>
   using namespace std;
   int main (){
     int N,g,c=0;
