@@ -1,0 +1,27 @@
+
+def koefff(a,n,k):
+    if (k>n):   
+        return 0
+    if k>n//2: 
+        k=n-k
+    if k==0:   
+        return 1
+    if k==1:   
+        return n
+    while len(a)<n-3:
+        for i in range(len(a),n-3):
+            r=[]
+            for j in range(2,i//2+3):
+                r.append(koefff(a,i+3,j-1)+koefff(a,i+3,j))
+            a.append(r)
+    r=a[n-4]
+    if len(r)<k-1:
+        for i in range(len(r),k-1):
+            r.append(koefff(a,n-1,k-1)+koefff(a,n-1,k))
+    return a[n-4][k-2]
+a=[]
+print("input the n Numba")
+b=int(input())
+print("input the k Numba")
+c=int(input())
+print(koefff(a,b,c))
