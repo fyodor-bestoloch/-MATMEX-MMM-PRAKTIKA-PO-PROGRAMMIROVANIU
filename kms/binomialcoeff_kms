@@ -25,3 +25,4 @@ b=int(input())
 print("input the k Numba")
 c=int(input())
 print(koefff(a,b,c))
+  
