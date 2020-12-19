@@ -10,3 +10,4 @@ a=int(input())
 e=2.7182818284590452353602874713527
 s=factorial(a)/e
 print(math.floor(s)+1)
+ 
