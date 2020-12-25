@@ -14,11 +14,10 @@ int* deleting(int *arr, int &b)
         }
     }
     b=b-h;
-    int *res=new int[b];
     for (int i=0;i<b;i++)
-    res[i]=arr[i+h];
-    delete arr[];
-    return res;
+    arr[i]=arr[i+h];
+    return arr;
+    delete [] arr;
 }
 int main()
 {
@@ -26,12 +25,11 @@ int main()
   int *arr1=new int[N];
   for (int i=0;i<N;i++)
   {
-    arr1[i]=rand()%10;
+    arr1[i]=rand()%313;
     cout<<arr1[i]<< " ";
   }
   cout<<"\n";
-  int *arr2=deleting(arr1, N);
-  for (int i=0;i<N;i++) cout<<arr2[i]<<" ";
+  arr1=deleting(arr1, N);
+  for (int i=0;i<N;i++) cout<<arr1[i]<<" ";
   delete [] arr1;
-  delete [] arr2;
 }
