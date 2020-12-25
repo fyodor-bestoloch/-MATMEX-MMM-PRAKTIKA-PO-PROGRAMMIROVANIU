@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-void deleting(int *arr, int &b)
+void deleting(int* &arr, int &b)
 {
     int h=0;
     for (unsigned i=0;i<b;i++)
@@ -17,7 +17,7 @@ void deleting(int *arr, int &b)
     int *res=new int[b];
     for (int i=0;i<b;i++) res[i]=arr[i+h];
     delete [] arr;
-    for (int i=0;i<b;i++) arr[i] = res[i];
+    arr=res;
 }
 int main()
 {
