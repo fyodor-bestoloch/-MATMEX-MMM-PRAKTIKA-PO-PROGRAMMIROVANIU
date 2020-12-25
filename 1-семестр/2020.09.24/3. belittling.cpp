@@ -1,25 +1,35 @@
-#include <vector>
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main() {
-	int n,f;
-	vector<int> temp;
-	cin>>n;
-	vector<int> A;
-	for (int i=0;i<n;i++) {
-		f=rand()%4534;
-    cout<<f<<" ";
-		A.push_back(f);
-	}
-	for (int i=0;i<n;i++) {
-		if (A[i]%2!=0) temp.push_back(A[i]);
-	}
-	A.clear();
-	A=temp;
-  cout<<"\n";
-	for(int i=0;i<A.size();i++) {
-		cout<<A[i]<<" ";
-	}
-	return 0;
+void deleting(int *arr, int &b)
+{
+    int h=0;
+    for (unsigned i=0;i<b;i++)
+    {
+        if (arr[i]%2 == 0)
+        {
+          int tmp=arr[h];
+          arr[h]=arr[i];
+          arr[i]=tmp;
+          h++;
+        }
+    }
+    b = b-h;
+    int *res=new int[b];
+    for (int i=0;i<b;i++) res[i]=arr[i+h];
+    delete [] arr;
+    for (int i=0;i<b;i++) arr[i] = res[i];
 }
-
+int main()
+{
+  int N=10;
+  int *arr1=new int[N];
+  for (int i=0;i<N;i++)
+  {
+    arr1[i]=rand()%4533;
+    cout<<arr1[i]<< " ";
+  }
+  cout<<"\n";
+  deleting(arr1, N);
+  for (int i=0;i<N;i++) cout<<arr1[i]<<" ";
+  return 0;
+}
