@@ -17,6 +17,7 @@ int* deleting(int *arr, int &b)
     int *res=new int[b];
     for (int i=0;i<b;i++)
     res[i]=arr[i+h];
+    delete arr[];
     return res;
 }
 int main()
