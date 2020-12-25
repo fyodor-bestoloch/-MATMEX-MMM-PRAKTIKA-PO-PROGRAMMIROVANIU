@@ -21,11 +21,12 @@ int* deleting(int *arr, int &b)
 }
 int main()
 {
-  int N=10;
+  int N;
+  cin>>N;
   int *arr1=new int[N];
   for (int i=0;i<N;i++)
   {
-    arr1[i]=rand()%313;
+    arr1[i]=rand()%N*(N-2);
     cout<<arr1[i]<< " ";
   }
   cout<<"\n";
