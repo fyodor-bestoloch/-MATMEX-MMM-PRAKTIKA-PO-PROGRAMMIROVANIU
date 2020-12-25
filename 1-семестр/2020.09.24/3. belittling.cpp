@@ -26,7 +26,7 @@ int main()
   int *arr1=new int[N];
   for (int i=0;i<N;i++)
   {
-    arr1[i]=rand()%N*(N-2);
+    arr1[i]=rand()%4232;
     cout<<arr1[i]<< " ";
   }
   cout<<"\n";
